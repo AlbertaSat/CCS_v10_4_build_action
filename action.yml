@@ -1,6 +1,13 @@
 # action.yml
 name: 'ccsv10 project build'
 description: 'Builds project for TI Hercules MCUs'
+inputs:
+  config:
+    description: 'Choose configurations for build'
+    required: true
+    default: 'Debug'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.config }}
