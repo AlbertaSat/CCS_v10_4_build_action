@@ -1,5 +1,5 @@
 # Use custom unofficial docker image
-FROM enggasat/ti-ccsv10_4:v0.1
+FROM enggasat/ti-ccsv10_4:v0.2
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh

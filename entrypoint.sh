@@ -1,11 +1,8 @@
 #!/bin/bash
 
-echo "Running configuration: $1"
+echo "Running unit tests"
 
-# Import project (Assumes that your project is directly under /github/workspace/)
-eclipse -noSplash -data ~/ccs-workspace -application com.ti.ccstudio.apps.projectImport -ccs.location /github/workspace/
-# compile all imported projects
-eclipse -noSplash -data ~/ccs-workspace -application com.ti.ccstudio.apps.projectBuild -ccs.configuration $1 -ccs.workspace -ccs.autoImport -ccs.listErrors
+cd test/ && cp usr/local/lib/libcgreen.so* . && make test
 
 retcode=$?
 
