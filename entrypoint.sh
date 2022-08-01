@@ -2,7 +2,9 @@
 
 echo "Running unit tests"
 
-cd test/ && cp usr/local/lib/libcgreen.so* . && make test
+ls
+
+cd /github/workspace/test && cp usr/local/lib/libcgreen.so* . && make test
 
 retcode=$?
 
